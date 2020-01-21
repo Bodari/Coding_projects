@@ -1,0 +1,12 @@
+ul {
+  margin:0 auto;
+}
+
+li {
+    padding:5px 40px;
+}
+
+a:link, a:visited {
+  color: white;
+  cursor: pointer;
+}

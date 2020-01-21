@@ -1,0 +1,30 @@
+<div id="container">
+    <div id="first">
+    <h2>Google map</h2>
+    (click on the map)<br><br>
+    City/Town/Village: {{city}}<br>
+    Temperature: {{temp}} &#8451;
+    </div>
+
+    <div id="second">
+    <h2>Finland</h2>
+
+    Oulu: {{ouluTemp}} &#8451;<br>
+    Rovaniemi: {{rovaniemiTemp}} &#8451;<br>
+    Tampere: {{tampereTemp}} &#8451;<br>
+    Helsinki: {{helsinkiTemp}} &#8451;<br>
+    </div>
+
+    <section class="weather-search" class="form-group">
+        <form>
+            <div class="form-group">
+                <label for="city"><h2>Weather-search</h2></label>
+                <input class="form-control" type="text" placeholder="Enter city name" id="city" [(ngModel)]="searchCity"
+                    name="searchCity" (input)="onSearchLocationWithEvent($event)">
+            </div>
+            <button class="btn btn-primary" [disabled]="disabledForecastButton" (click)="searchByCity()"
+                type="submit">Search</button><br><br>
+            {{searchCity}} {{searchCityTemp}} &#8451;
+        </form>
+    </section>
+</div>
